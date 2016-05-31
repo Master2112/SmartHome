@@ -8,6 +8,6 @@ $dbCrownstones = new DatabaseInfo("db.timfalken.com", "md300889db336985", "crown
 $dbUserNetworks = new DatabaseInfo("db.timfalken.com", "md300889db336985", "userToNetwork", "md300889db336985", "j8UmuEAx");
 
 $users = new ApiCollection($dbUsers, new ParamsLayout(["name", "email", "password", "prefs", "phoneId"]));
-$networks = new ApiCollection($dbLocations, new ParamsLayout(["name"]));
+$networks = new ApiCollection($dbNetworks, new ParamsLayout(["name"]));
 $crownstones = new ApiCollection($dbCrownstones, new ParamsLayout(["name", "networkId"]));
-$userToNetwork = new ApiCollection($dbCrownstones, new ParamsLayout(["userId", "networkId", "role"]));
+$userToNetwork = new ApiCollection($dbUserNetworks, new ParamsLayout(["userId", "networkId", "role"]));

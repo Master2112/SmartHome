@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	
+	RewriteRule ^users/?$ users.php
+	RewriteRule ^users\.(xml|json)$ users.php?type=$1
+	
+	RewriteRule ^users/([0-9]+)/?$ users.php?id=$1&type=json
+	RewriteRule ^users/([0-9]+)\.(xml|json)$ users.php?id=$1&type=$2
+	
+	RewriteRule ^networks/?$ networks.php
+	RewriteRule ^networks\.(xml|json)$ networks.php?type=$1
+	
+	RewriteRule ^networks/([0-9]+)/?$ networks.php?id=$1&type=json
+	RewriteRule ^networks/([0-9]+)\.(xml|json)$ networks.php?id=$1&type=$2
+	
+	RewriteRule ^crownstones/?$ crownstones.php
+	RewriteRule ^crownstones\.(xml|json)$ crownstones.php?type=$1
+	
+	RewriteRule ^crownstones/([0-9]+)/?$ crownstones.php?id=$1&type=json
+	RewriteRule ^crownstones/([0-9]+)\.(xml|json)$ crownstones.php?id=$1&type=$2	
+</IfModule>
