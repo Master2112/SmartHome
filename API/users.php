@@ -21,6 +21,8 @@ else
 	
 function FinalizeChar($raw)
 {
+	include "roles.php";
+	
 	if($raw == null)
 		return null;
 
@@ -33,6 +35,8 @@ function FinalizeChar($raw)
 	for($i = 0; $i < count($links); $i++)
 	{
 		$network = $networks->GetRow($links[$i]->networkId);
+		$network->role = $roles[$links[$i]->role];
+		$network->url = "http://timfalken.com/hr/smarthome/networks/" . $network->id;
 		array_push($raw->networks, $network);
 	}
 	
