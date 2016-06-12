@@ -6,6 +6,13 @@ if(isset($_GET["id"]))
 {
 	echo json_encode(FinalizeChar($users->GetRow($_GET["id"])));
 }
+else if (isset($_GET["phoneId"]))
+{
+	$id = $_GET["phoneId"];
+	$user = $users->Where("`phoneId`='$id'")[0];
+	
+	echo json_encode(FinalizeChar($user));
+}
 else
 {
 	$all = $users->All();
