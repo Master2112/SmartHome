@@ -7,6 +7,12 @@
 	RewriteRule ^users/([0-9]+)/?$ users.php?id=$1&type=json
 	RewriteRule ^users/([0-9]+)\.(xml|json)$ users.php?id=$1&type=$2
 	
+	RewriteRule ^users/([0-9]+)/prefs/([0-9]+)$ users.php?id=$1&type=json&mode=prefs&prefId=$2
+	RewriteRule ^users/([0-9]+)/prefs/([0-9]+)\.(xml|json)$ users.php?id=$1&type=$3&mode=prefs&prefId=$2
+	
+	RewriteRule ^users/([0-9]+)/prefs/?$ users.php?id=$1&type=json&mode=prefs
+	RewriteRule ^users/([0-9]+)/prefs\.(xml|json)$ users.php?id=$1&type=$2&mode=prefs
+	
 	RewriteRule ^networks/?$ networks.php
 	RewriteRule ^networks\.(xml|json)$ networks.php?type=$1
 	
