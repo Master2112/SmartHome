@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Andreas/Documents/GitHub/bluenet-example-android/bluenet/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Users/amber/Documents/HRO%20Mediatechnologie/Jaar%202/Periode%204/Project/SmartHome/App/SmartHome/bluenet/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -202,22 +202,22 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/Andreas/Documents/GitHub/bluenet-example-android/bluenet/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/D:/Users/amber/Documents/HRO%20Mediatechnologie/Jaar%202/Periode%204/Project/SmartHome/App/SmartHome/bluenet/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <string name="app_name">bluenet-lib-android</string>
-    <!-- From: file:/C:/Users/Andreas/Documents/GitHub/bluenet-example-android/bluenet/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Users/amber/Documents/HRO%20Mediatechnologie/Jaar%202/Periode%204/Project/SmartHome/App/SmartHome/bluenet/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/C:/Users/Andreas/Documents/GitHub/bluenet-example-android/bluenet/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/D:/Users/amber/Documents/HRO%20Mediatechnologie/Jaar%202/Periode%204/Project/SmartHome/App/SmartHome/bluenet/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-    <!-- From: file:/C:/Users/Andreas/Documents/GitHub/bluenet-example-android/bluenet/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Users/amber/Documents/HRO%20Mediatechnologie/Jaar%202/Periode%204/Project/SmartHome/App/SmartHome/bluenet/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

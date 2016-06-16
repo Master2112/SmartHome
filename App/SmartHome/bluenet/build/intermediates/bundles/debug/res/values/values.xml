@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Andreas/Documents/GitHub/bluenet-example-android/bluenet/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/Users/amber/Documents/HRO%20Mediatechnologie/Jaar%202/Periode%204/Project/SmartHome/App/SmartHome/bluenet/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">bluenet-lib-android</string>
-    <!-- From: file:/C:/Users/Andreas/Documents/GitHub/bluenet-example-android/bluenet/src/main/res/values/styles.xml -->
+    <!-- From: file:/D:/Users/amber/Documents/HRO%20Mediatechnologie/Jaar%202/Periode%204/Project/SmartHome/App/SmartHome/bluenet/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
