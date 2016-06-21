@@ -20,6 +20,13 @@ if($mode == "user")
 		
 		echo json_encode(FinalizeChar($user));
 	}
+	else if (isset($_GET["email"]))
+	{
+		$id = $_GET["email"];
+		$user = $users->Where("`email`='$id'")[0];
+		
+		echo json_encode(FinalizeChar($user));
+	}
 	else
 	{
 		$all = $users->All();
