@@ -28,24 +28,38 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
+
+    // check of een user is ingelogd
+    public static boolean isLoggedIn = false;
+
     boolean isDone = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
 
-        UserInfoHandler infoHandler = LinkBuilder("smarthome","users", "?phoneId=4C:7F:62:2E:FE:B4");
+         //krijg de login info om de linkbuilder te maken
+         SharedPreferences getMac = getSharedPreferences("macadress", Context.MODE_PRIVATE);
+         String macAdress = getMac.getString("userMac", "");
 
-        while(!isDone)
+        if(isLoggedIn == false)
         {
-            // wacht tot de 2e thread klaar is xD
+            Intent intent = new Intent(this, login.class);
+            startActivity(intent);
         }
 
-        TextView usernameView = (TextView) findViewById(R.id.textView);
-        usernameView.setText(infoHandler.username);
+         UserInfoHandler infoHandler = LinkBuilder("smarthome", "users?email=", macAdress);
 
-    }
+         while (!isDone) {
+             // wacht tot de 2e thread klaar is xD
+         }
+
+         TextView usernameView = (TextView) findViewById(R.id.textView);
+         usernameView.setText(infoHandler.username);
+     }
+
+
 
     // de netwerk checker
     private boolean isNetworkAvailable() {
@@ -70,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     public UserInfoHandler LinkBuilder(String device, String datatype, String id)
     {
 
-        String url =  "http://timfalken.com/hr/"+device+"/"+datatype+"/" + id;
+        String url =  "http://timfalken.com/hr/"+device+"/"+datatype + id;
         final UserInfoHandler infoHandler = new UserInfoHandler();
 
         if(isNetworkAvailable()) {
@@ -105,24 +119,31 @@ public class MainActivity extends AppCompatActivity {
                             int id = APIdata.getInt("id");
                             String macAdress = APIdata.getString("phoneId");
 
-                            JSONArray networksArray = APIdata.getJSONArray("networks");
+                            JSONArray prefsArray = APIdata.getJSONArray("prefs");
 
-                            JSONObject networks = networksArray.getJSONObject(0);
                             //functie die alle data zet
                             infoHandler.username = username;
                             infoHandler.email = email;
                             infoHandler.id = id;
                             infoHandler.phoneId = macAdress;
+                            infoHandler.prefArray = prefsArray;
 
+                            String arrayString = prefsArray.toString();
+
+                            // maak een session aan genaamd sharedprefs en stop hier alle data in
                             SharedPreferences sharedPrefs = getSharedPreferences("userInfo",Context.MODE_PRIVATE);
 
                             SharedPreferences.Editor editor = sharedPrefs.edit();
 
+                            // dit is de informatie die in sharedprefs staat
                             editor.putString("username", username);
                             editor.putString("email", email);
                             editor.putInt("id", id);
+                            editor.putString("prefsString", arrayString);
 
 
+
+                            // hier voegt hij alle informatie toe
                             editor.commit();
 
 
