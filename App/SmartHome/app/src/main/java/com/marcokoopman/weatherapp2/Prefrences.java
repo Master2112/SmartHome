@@ -74,6 +74,7 @@ public class Prefrences extends AppCompatActivity{
         {
             str += obj.getString("action") + "\n";
             str += obj.getString("time") + "\n";
+            str += obj.getString("date") + "\n";
         }
         catch(JSONException e)
         {

@@ -55,8 +55,20 @@ public class MainActivity extends AppCompatActivity {
              // wacht tot de 2e thread klaar is xD
          }
 
-         TextView usernameView = (TextView) findViewById(R.id.textView);
-         usernameView.setText(infoHandler.username);
+         TextView usernameView = (TextView) findViewById(R.id.homeTitle);
+         usernameView.setText("Welcome " + infoHandler.username);
+
+         TextView usernameinfoView = (TextView) findViewById(R.id.UsernameView);
+         usernameinfoView.setText(infoHandler.username);
+
+        TextView userEmailView = (TextView) findViewById(R.id.textView2);
+        userEmailView.setText(infoHandler.email);
+
+        TextView userMacAdressView = (TextView) findViewById(R.id.macadressView);
+        userMacAdressView.setText(infoHandler.phoneId);
+
+
+
      }
 
 
@@ -139,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString("username", username);
                             editor.putString("email", email);
                             editor.putInt("id", id);
+                            editor.putString("macAdress", macAdress);
                             editor.putString("prefsString", arrayString);
 
 

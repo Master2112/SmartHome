@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:scaleType="fitXY"
+        />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/macadresstext"
+        android:padding="30dp"
+        android:background="#ffffff"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
         android:text="Type email here" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log in"
-        android:id="@+id/loginbtn"
-        android:layout_gravity="center_horizontal"
-        android:onClick="loginChecker" />
-</LinearLayout>
+        android:layout_alignBottom="@+id/macadresstext"
+        android:layout_marginBottom="-100dp"
+        android:padding="25dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="loginChecker"
+        android:id="@+id/button2" />
+
+</RelativeLayout>
